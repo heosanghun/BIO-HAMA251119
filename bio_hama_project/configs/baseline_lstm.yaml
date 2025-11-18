@@ -1,0 +1,15 @@
+# configs/baseline_lstm.yaml
+# Baseline LSTM 모델 설정
+
+model_params:
+  vocab_size: 5000
+  embed_size: 256
+  hidden_size: 512
+  num_layers: 2
+
+train_params:
+  batch_size: 16
+  eval_batch_size: 32
+  learning_rate: 3e-4
+  weight_decay: 1e-5
+

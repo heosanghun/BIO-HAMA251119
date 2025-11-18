@@ -1,0 +1,39 @@
+# configs/bio_hama.yaml
+# Bio-HAMA 모델 및 학습 설정
+
+model_params:
+  vocab_size: 5000
+  embed_dim: 256
+  state_dim: 128
+  num_sub_goals: 10
+  routing_top_k: 3
+  module_names:
+    - "SocialCognitionModule"
+    - "PlanningModule"
+    - "MetacognitionModule"
+    - "EmotionRegulationModule"
+    - "AdaptiveMemoryModule"
+    - "MultiExpertsModule"
+    - "SparseAttentionModule"
+    - "AttentionControlModule"
+    - "MultimodalModule"
+    - "TerminationModule"
+    - "TopologyLearningModule"
+    - "EvolutionaryEngineModule"
+
+train_params:
+  batch_size: 8
+  eval_batch_size: 16
+  learning_rate: 1e-4
+  weight_decay: 1e-5
+  max_grad_norm: 1.0
+
+bio_a_grpo_params:
+  base_lr: 1e-4
+  base_gamma: 0.99
+  base_epsilon: 0.2
+  norepinephrine_sensitivity: 1.0
+  serotonin_sensitivity: 0.1
+  acetylcholine_sensitivity: 1.5
+  num_modules: 12
+
